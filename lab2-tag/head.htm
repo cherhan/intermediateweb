@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<!-- todo 1: try change this title and see how it reflect in browser -->
+		<title>This is a demo webpage</title>
+		
+		<!-- these are few common meta example -->
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="description" content="Beginner class on HTML">
+		<meta charset="UTF-8">
+		
+		<!-- todo 2: can you make this page auto refresh itself every 3 seconds? -->
+		
+		<!-- this is how we implement css style at page level -->
+		<style>
+			body{background:black; color:white;}
+		</style>
+		
+		<script>
+		// function to set cookie
+		function setCookie(cname, cvalue, exdays) {
+			var d = new Date();
+			d.setTime(d.getTime() + (exdays*24*60*60*1000));
+			var expires = "expires="+d.toUTCString();
+			document.cookie = cname + "=" + cvalue + "; " + expires;
+		}
+		
+		// function to get a cookie
+		function getCookie(cname) {
+			var name = cname + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0; i<ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1);
+				if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+			}
+			return "";
+		}
+		</script>
+	</head>
+	<body>
+		<p>Page Refreshed <span id="count">0</span> time</p>
+		
+		<script>
+			// please note the page counter will only work when this html page is called thru web browser
+			// some browser might refuse to load a local html page with script that set cookie in it for security reason
+			// working example on internet: http://www.yeesiang.com/test/beginningHtml/head.htm
+			
+			// get the counter we stored and increase the value by 1
+			var count = parseInt(getCookie('count'));
+			if(count== "" || isNaN(count)) count = 0;
+			count = count +1;
+			
+			// store the new value back to cookie
+			setCookie('count', count, 5);
+			
+			// set the value to span id=total to display it
+			var span = document.getElementById('count');
+			span.innerHTML = getCookie('count');
+		</script>
+	</body>
+</html>

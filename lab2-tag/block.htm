@@ -1,0 +1,29 @@
+<style>
+	.divBorder{border:1px solid blue; margin:10px; padding:5px;}
+	.spanBorder{border:1px solid green;}
+</style>
+
+<h1>Block</h1>
+<div class="">
+	<h2>Block Level 1</h2>
+	<!-- div block can go nested -->
+	<!-- todo 1: add divBorder class to all <div> found in this page -->
+	<div class="">
+		<h3>Block Level 2 (nested)</h3>
+		<p>This is a <span class="spanBorder">span element</span> inside a nested div block</p>
+
+	</div>
+</div>
+
+
+<h3>Nested span</h3>
+<p>We dont do nested span element, as in span inside another span.</p>
+<p>The output is not what we expected.</p>
+
+<!-- todo 1: add spanBorder class to all <span> found in this page -->
+<span class="">
+span level 1
+	<span class="">
+		span level 2
+	</span>
+</span>
