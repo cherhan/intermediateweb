@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+	<h1>Fade In &amp; Fade Out Effect</h1>
+	<p>Please click the buttons below and observe what happen to me</p>
+	<button id="fadeOut" class="btn">Fade Out</button>
+	<button id="fadeIn" class="btn">Fade In</button>
+	
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script>
+	$(document).ready(function() {
+		$("#fadeIn").click(function(){
+			$("p").fadeIn();
+		});
+
+		$("#fadeOut").click(function(){
+			$("p").fadeOut();
+		});
+	});
+	</script>
+</body>
+</html>

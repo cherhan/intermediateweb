@@ -1,0 +1,23 @@
+<html>
+<head>
+	<style>
+		div, span{padding:1em; border:1px solid black; display:block; background:white;}
+	</style>
+</head>
+<body>
+	<h1>Traverse Up</h1>
+	<p>Only the parent item will set to yellow background color.</p>
+	<div>
+		Parent
+		<span>Child</span>
+	</div>
+	
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script>
+	$(document).ready(function() {
+		$("span").parent().css("background", "yellow");
+	});
+	</script>
+</body>
+</html>

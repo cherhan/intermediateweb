@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+	<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+	<style>
+		body{margin:2em;}
+     </style>
+</head>
+<body>
+	<h2>Default</h2>
+	<input id="spinner-1" />
+	  
+	<h2>With custom Range</h2>
+	<input id="spinner-2" />
+	
+	<h2>With custom step</h2>
+	<input id="spinner-3" />
+
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	
+	<script>
+	$(document).ready(function() {
+		$( "#spinner-1" ).spinner({
+			stop: function( event, ui ) {
+				alert($( "#spinner-1" ).spinner("value"));
+		   }
+		}); 
+		
+		$( "#spinner-2" ).spinner({
+			min:2000,
+			max:2100,
+			stop: function( event, ui ) {
+				alert($( "#spinner-2" ).spinner("value"));
+		   }
+		});
+		
+		$( "#spinner-3" ).spinner({
+			step:100,
+			min:2000,
+			max:2100,
+			stop: function( event, ui ) {
+				alert($( "#spinner-3" ).spinner("value"));
+		   }
+		});
+	});
+	</script>
+</body>
+</html>

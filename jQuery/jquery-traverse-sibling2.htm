@@ -1,0 +1,26 @@
+<html>
+<head>
+	<style>
+		div, span{padding:1em; border:1px solid black; display:block; background:white;}
+	</style>
+</head>
+<body>
+	<h1>Traverse Sibling</h1>
+	<p></p>
+	
+	<h2>I am h2</h2>
+	<h3>I am sibling of h2</h3>
+	<h4>I am sibling of h2 too</h4>
+	
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script>
+	$(document).ready(function() {
+		//$("h2").next().css("background", "yellow");
+		
+		// todo: how to highlight all sibling of h2?
+		$("h2").nextAll().css("background", "yellow");
+	});
+	</script>
+</body>
+</html>

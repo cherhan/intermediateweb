@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+	<h1>Show &amp; Hide Effect</h1>
+	<p>Please click the buttons below and observe what happen to me</p>
+	<button id="hide" class="btn">Hide</button>
+	<button id="show" class="btn">Show</button>
+	
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script>
+	$(document).ready(function() {
+		// todo: can you modify it to hide with a speed of 1000 milliseconds?
+		$("#hide").click(function(){
+			$("p").hide();
+		});
+
+		$("#show").click(function(){
+			$("p").show();
+		});
+	});
+	</script>
+</body>
+</html>

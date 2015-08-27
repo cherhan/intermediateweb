@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+	<h1>Toggle Effect</h1>
+	<p>Please click the button below and observe what happen to me</p>
+	<button class="btn">Show/Hide Toggle</button>
+	
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script>
+	$(document).ready(function() {
+		$("button").click(function(){
+			$("p").toggle();
+		});
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+	<style>
+		div, span{padding:1em; border:1px solid black; display:block; background:white;}
+	</style>
+</head>
+<body>
+	<h1>Traverse Down</h1>
+	<p>Only the child item with id #child2 will set to yellow background color.</p>
+	<div>
+		Parent
+		<span id="child1">Child 1</span>
+		<span id="child2">Child 2</span>
+		<span id="child3">Child 3</span>
+	</div>
+	
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script>
+	$(document).ready(function() {
+		$("div").find('#child2').css("background", "yellow");
+	});
+	</script>
+</body>
+</html>

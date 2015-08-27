@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+	<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+	<style>
+		body{margin:2em;}
+     </style>
+</head>
+<body>
+	<h2>Default Range (0-100)</h2>
+	<div id="slider-1"></div>
+	  
+	<h2>With custom Range</h2>
+	<div id="slider-2"></div>
+
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	
+	<script>
+	$(document).ready(function() {
+		$( "#slider-1" ).slider({
+			stop: function( event, ui ) {
+				alert(ui.value);
+		   }
+		}); 
+		
+		$( "#slider-2" ).slider({
+			min:2000,
+			max:2100,
+			stop: function( event, ui ) {
+				alert(ui.value);
+		   }
+		});
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+	<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+	<div id="div1" style="border:solid 1px;background-color:gainsboro;">
+		<span>You can't move me!</span><br /><br />
+	</div>
+	<div id="div2" style="border:solid 1px;background-color:grey;">
+		 <span>Dragging will start only after you drag me for 50px</span>
+		 <br /><br />
+	</div>
+	<div id="div3" style="border:solid 1px;background-color:gainsboro;">
+		<span>You have to wait for 500ms for dragging to start!</span>
+		<br /><br />
+	</div>
+	
+	<h2>Constrain Movement</h2>
+	<div id="div4" style="border:solid 1px;background-color:gainsboro;">
+		<span>You can drag me only within this div.</span><br /><br />
+	</div>
+	<div id="div5" style="border:solid 1px;background-color:grey;">
+		<span>You can drag me only along x axis.</span><br /><br />
+	</div>
+	
+	<h2>Move content by duplicating</h2>
+	<div id="div6" style="border:solid 1px;background:#eee; height:50px;">
+		<span>You can duplicate me....</span>
+	</div>
+	
+
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	
+	<script>
+	$(document).ready(function() {
+		$("#div1 span").draggable ({ disabled: true });
+		$("#div2 span").draggable ({ distance: 50 });
+		$("#div3 span").draggable ({ delay: 500 });
+		$("#div4 span").draggable ({containment : "#div4"});
+		$("#div5 span").draggable ({axis : "x"});
+		$("#div6 span").draggable ({helper : "clone"});
+	});
+	</script>
+</body>
+</html>

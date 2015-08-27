@@ -1,0 +1,29 @@
+<html>
+<head></head>
+<body>
+	<ul id="myList">
+		<li class="portal"><a href="http://www.yahoo.com">Yahoo</a></li>
+		<li class="portal"><a href="http://www.google.com">Google</a></li>
+		<li class="social"><a href="http://www.facebook.com">Facebook</a></li>
+		<li class="social"><a href="http://www.linkedin.com">Linkendin</a></li>
+	</ul>
+	
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script>
+	$(document).ready(function() {
+		// hide the first list item
+		// $('#myList li:first').hide();
+		
+		// try 1: hide link with google url only
+		// $('#myList li a[href="http://www.google.com"]').parent().hide();
+		
+		// try 2: hide all list item with 'social' classs
+		// $('#myList li.social').hide();
+		
+		// try 3: hide all list item
+		// $('#myList li').hide();
+	});
+	</script>
+</body>
+</html>

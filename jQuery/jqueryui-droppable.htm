@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+	<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+	<style>
+	#draggable-1 
+	{
+		width: 100px; height: 50px; padding: 0.5em; float: left;
+		margin: 22px 5px 10px 0; 
+	}
+	
+	#droppable-1 
+	{ 
+		width: 120px; height: 90px;padding: 0.5em; float: left; 
+		margin: 10px; 	
+	}
+     </style>
+</head>
+<body>
+	
+	<div id="draggable-1" class="ui-widget-content">
+         <p>Drag me to my target</p>
+      </div>
+      <div id="droppable-1" class="ui-widget-header">
+         <p>Drop here</p>
+      </div>
+
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	
+	<script>
+	$(document).ready(function() {
+		$( "#draggable-1" ).draggable();
+		$( "#droppable-1" ).droppable();
+	});
+	</script>
+</body>
+</html>
