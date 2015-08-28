@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+	<h1>This is a text paragraph <span id="pie1" class="pie">1/5</span> and a pie chart is displayed in line.</h1>
+	<h1>This is a text paragraph <span id="pie2" class="pie">2,5,3</span> and a pie chart is displayed in line.</h1>
+	<p>You can also pass delimiter, fill, height, radius and width options. Passing a radius will set the correct width and height, the pie will always be a circle that fits the available space.</p>
+	
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script src="vendors/jquery.peity.min.js"></script>
+	<script>
+		$("#pie1").peity("pie");
+		
+		// todo: set each pieces of the #pie2 color different
+		$("#pie2").peity("pie", {
+		  fill: ["red", "green", "blue"]
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head></head>
+<body>
+	<h1>Realtime Chart</h1>
+	<p><span class="updating-chart">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span></p>
+	<p>Charts can be updated by changing the the jQuery selection's text content and calling change() on it. The chart will be redrawn with the same options that were originally passed to it.</p>
+	
+	
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script src="vendors/jquery.peity.min.js"></script>
+	<script>
+		var updatingChart = $(".updating-chart").peity("line", { width: 64 })
+		
+		// jquery interval function, called periodically
+		setInterval(function() {
+			// generate a random value
+			var random = Math.round(Math.random() * 10)
+			// add the value to stack
+			var values = updatingChart.text().split(",")
+			values.shift()
+			values.push(random)
+			
+			// update chart
+			updatingChart.text(values.join(",")).change()
+		}, 1000)
+	</script>
+</body>
+
+</html>

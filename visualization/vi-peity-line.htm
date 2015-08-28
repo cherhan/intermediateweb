@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+	<h1>This is a text paragraph <span class="line">1,2,3,4,5,6,7,8,9</span> and a bar chart is displayed in line.</h1>
+	<h1>This is a text paragraph <span class="line">9,8,7,6,5,4,3,2,1</span> and a bar chart is displayed in line.</h1>
+	<h1>This is a text paragraph <span class="line">3,5,2,7,1,9,8,4,1,6</span> and a bar chart is displayed in line.</h1>
+	<p>Line charts work on a comma-separated list of digits. Line charts can take the following options: delimiter, fill, height, max, min, stroke, strokeWidth and width.</p>
+	
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+	<script src="vendors/jquery.peity.min.js"></script>
+	<script>
+		$("span.line").peity("line");
+	</script>
+</body>
+
+</html>
