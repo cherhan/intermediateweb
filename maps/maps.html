@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  
+  <style>
+    #map-canvas{
+      height: 425px;
+      width: 425px;
+    }
+  </style>
+  
+  
+</head>
+<body>
+  <div id="map-canvas"></div>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
+</body>
+
+<script>
+  navigator.geolocation.getCurrentPosition(showMap);
+
+  function showMap(position) {
+    var myLatlng = new google.maps.LatLng(
+      position.coords['latitude'],
+      position.coords['longitude']
+      );
+    
+    var mapOptions = {
+      zoom: 15,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    
+    var map = new google.maps.Map(
+      document.getElementById("map-canvas"),
+      mapOptions
+      );
+  }
+</script>
+</html>
