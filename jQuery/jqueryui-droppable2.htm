@@ -17,16 +17,16 @@
 		<p>Drag me to my target</p>
 	</div>
 	<div id="droppable-2" class="ui-widget-header">
-		<p>Drop here</p>
+		<p>Drop zone</p>
 	</div>
 	<div id="droppable-3" class="ui-widget-header">
-		<p>I'm disabled, you can't drop here!</p>
+		<p>Disabled drop zone</p>
 	</div>
 	<div id="droppable-4" class="ui-widget-header">
-		<p>Tolerance Touch!</p>
+		<p>Touch Tolerance </p>
 	</div>
 	<div id="droppable-5" class="ui-widget-header">
-		<p>Tolerance Fit!</p>
+		<p>Fit Tolerance</p>
 	</div>
 
 
@@ -36,7 +36,7 @@
 	
 	<script>
 	$(document).ready(function() {
-		$( "#draggable-2" ).draggable();
+		$( "#draggable-2" ).draggable({ revert: 'invalid' });
 		
 		$( "#droppable-2" ).droppable({drop: function( event, ui ) {
 		   $(this).addClass( "ui-state-highlight" ).find( "p" ).html( "Dropped!" );
@@ -48,7 +48,7 @@
 		   $(this).addClass( "ui-state-highlight" ).find( "p" ).html( "Dropped with a touch!" );
 		}});
 		$( "#droppable-5" ).droppable({tolerance: 'fit', drop: function( event, ui ) {
-		   $(this).addClass( "ui-state-highlight" ).find( "p" ).html( "Dropped only when fully fit on the me!" );
+		   $(this).addClass( "ui-state-highlight" ).find( "p" ).html( "Dropped only when fully fit on me!" );
 		}});
 	});
 	</script>
